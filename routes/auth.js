@@ -50,7 +50,7 @@ router.post('/createuser',[
             email: req.body.email,
             password: securepass,
             category: req.body.category,
-            createdAt: req.body.createdAt
+            createdAt: Date.now()
         })
 
         // storing the data

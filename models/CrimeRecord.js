@@ -3,6 +3,12 @@ import mongoose from 'mongoose';
 
 const crimeSchema = new mongoose.Schema({ 
 
+    user: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User",
+        required: true,
+    },
+
     title: {
         type: String,
         required: true
@@ -39,11 +45,11 @@ const crimeSchema = new mongoose.Schema({
     },
 
     createdAt: {
-        type: Date,
+        type: String,
     }
 
 })
 
 // exporting the schema
-const CrimeRecord = Schema('CrimeRecord',crimeSchema);
+const CrimeRecord = mongoose.model('CrimeRecord',crimeSchema);
 export default CrimeRecord;

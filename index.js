@@ -7,6 +7,7 @@ import connectDB from './config/db.js';
 
 // required routes
 import auth from './routes/auth.js'
+import records from './routes/records.js'
 
 dotenv.config();
 const app = express();
@@ -24,6 +25,7 @@ connectDB().then(() => {
 
 // available routes
 app.use('/api/auth',auth);
+app.use('/api/records',records);
 
 app.get("/", (req, res) => {
 res.send("API is running !");
