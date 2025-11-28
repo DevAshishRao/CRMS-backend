@@ -28,6 +28,11 @@ const crimeSchema = new mongoose.Schema({
         required: true
     },
 
+    recordType: {
+        type: String,
+        required: true
+    },
+
     location: {
         type: String,
         required: true

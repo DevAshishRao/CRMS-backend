@@ -2,7 +2,11 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 
+// importing the required files
 import connectDB from './config/db.js';
+
+// required routes
+import auth from './routes/auth.js'
 
 dotenv.config();
 const app = express();
@@ -18,10 +22,12 @@ connectDB().then(() => {
     process.exit(1);
 });
 
+// available routes
+app.use('/api/auth',auth);
+
 app.get("/", (req, res) => {
 res.send("API is running !");
 });
-
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
