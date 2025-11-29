@@ -8,7 +8,7 @@ import bcrypt from 'bcrypt';
 import User from '../models/User.js';
 
 // importing the middleware
-import fetchUser from '../middleware/fetchUser.js'
+import fetchUser from '../middleware/fetchuser.js'
 
 // jwt secret string
 const JWT_STRING = "WebTokenStringSecure";

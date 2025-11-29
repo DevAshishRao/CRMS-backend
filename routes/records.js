@@ -3,7 +3,7 @@ import express from 'express'
 import { body, validationResult} from 'express-validator'
 
 // importing the model & middleware
-import fetchUser from '../middleware/fetchUser.js'
+import fetchUser from '../middleware/fetchuser.js'
 import CrimeRecord from '../models/CrimeRecord.js'
 
 const router = express.Router();
